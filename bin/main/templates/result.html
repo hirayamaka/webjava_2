@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>WebJava初級課題2</title>
+</head>
+<body>
+<form th:object="${characterForm}">
+        <p th:text="*{name} + *{fightmessage}"/>
+</form>
+</body>
+</html>
