@@ -1,12 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>WebJava初級課題2</title>
 </head>
 <body>
-    <div th:object="${characterForm}">
-        <p th:text="*{selectedCharacter}"></p>が選択されました
+<form action="/result" th:object="${characterForm}">
+	 <div th:object="${characterForm}">
+        <p th:text="*{selectedCharacter}"></p>
+        <p th:text="'名前：' + *{name}"/>
     </div>
+    <input type="submit" value="たたかう"/>
+</form>
 </body>
 </html>

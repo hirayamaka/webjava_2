@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>WebJava初級課題2</title>
+</head>
+<body>
+<h1>キャラ作成</h1>
+    <!--<form action="#" th:action="@{/confirm}" th:object="${userForm}" method="post">  -->
+    <!-- form action="#" th:action="@{/confirm}" method="post"> -->
+	<form action="/confirm" th:object="${characterForm}">
+        職業：
+        <div th:each="item : ${characterMapItems}">
+            <input type="radio" name="characters" th:value="${item.key}" th:text="${item.value}" th:field="*{selectedCharacter}"/>
+        </div>
+        <div>
+        名前：<input type="text" class="form-control" th:field="*{name}" />
+      	</div>
+		<input type="submit" value="次へ"/>
+	</form>
+</body>
+</html>
