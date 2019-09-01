@@ -42,11 +42,11 @@ public class SelectCharacterController{
       //職業によって攻撃するメッセージを設定する。
       //戦士の場合
       if(warrior.getName() == characterForm.getSelectedCharacter()) {
-        characterForm.setName(warrior.fight());
+        characterForm.setFightmessage(warrior.fight());
       }
       //魔法使いの場合
       else if(witch.getName() == characterForm.getSelectedCharacter()) {
-        characterForm.setName(witch.fight());
+        characterForm.setFightmessage(witch.fight());
       }
 
       //ビューの設定
