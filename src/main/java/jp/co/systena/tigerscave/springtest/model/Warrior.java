@@ -11,6 +11,12 @@ public class Warrior extends Profession  {
 
   }
 
+  @Override
+  public String recovery() {
+    // TODO 自動生成されたメソッド・スタブ
+    return "はやくそうで回復した！";
+  }
+
   public String getName() {
     return name;
   }
@@ -18,5 +24,7 @@ public class Warrior extends Profession  {
   public void setName(String name) {
     this.name = name;
   }
+
+
 
 }

@@ -7,9 +7,12 @@
 <body>
 <form action="/result" th:object="${characterForm}">
 	 <div th:object="${characterForm}">
-        <p th:text="*{selectedCharacter}"></p>
-        <p th:text="'名前：' + *{name}"/>
+        職業：<input type="hidden" th:text="*{selectedCharacter}" ><br>
+        名前：<input type="hidden" th:text="*{name}" >
     </div>
+    <input type="hidden" th:field="*{selectedCharacter}" ><br>
+    <input type="hidden" th:field="*{name}" >
+    <input type="hidden" th:field="*{fightmessage}" >
     <input type="submit" value="たたかう"/>
 </form>
 </body>

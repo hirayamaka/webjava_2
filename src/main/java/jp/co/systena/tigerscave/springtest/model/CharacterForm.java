@@ -7,6 +7,8 @@ public class CharacterForm {
   @Size(max=10)         // 入力最大長
   private String name;
   private String fightmessage;
+  // 選択されたラジオボタン
+  private String selectedCharacter;
 
   //職業の名前を取得
   public String getName() {
@@ -17,9 +19,6 @@ public class CharacterForm {
   public void setName(String name) {
     this.name = name;
   }
-
-  // 選択されたラジオボタン
-  private String selectedCharacter;
 
   //職業を取得
   public String getSelectedCharacter() {

@@ -10,6 +10,12 @@ public class Witch extends Profession {
       return "は魔法で攻撃した";
   }
 
+  @Override
+  public String recovery() {
+    // TODO 自動生成されたメソッド・スタブ
+    return "はまほうで回復した";
+  }
+
   public String getName() {
     return name;
   }
