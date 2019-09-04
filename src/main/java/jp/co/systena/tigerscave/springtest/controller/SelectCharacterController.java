@@ -27,10 +27,10 @@ public class SelectCharacterController{
   public String index(Model model) {
       warrior.setName("戦士");
       witch.setName("魔法使い");
-      //fighter.setName("武闘家");
+      fighter.setName("武闘家");
       characterMap.put(warrior.getName(), "戦士");
       characterMap.put(witch.getName(), "魔法使い");
-      //characterMap.put(fighter.getName(), "武闘家");
+      characterMap.put(fighter.getName(), "武闘家");
 
       model.addAttribute("characterMapItems",characterMap);
       //model.addAttribute("message", new Message());
@@ -55,9 +55,9 @@ public class SelectCharacterController{
         characterForm.setFightmessage(witch.fight());
       }
       //武闘家の場合
-      /*else if(fighter.getName() == characterForm.getSelectedCharacter()) {
+      else if(name.equals(fighter.getName() ) ) {
         characterForm.setFightmessage(fighter.fight());
-      }*/
+      }
 
       //ビューの設定
       model.addAttribute("characterForm",characterForm);
