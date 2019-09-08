@@ -5,18 +5,20 @@
 <title>WebJava初級課題2</title>
 </head>
 <body>
-<h1>キャラ作成</h1>
+<h1>キャラ作成</h1>職業：
     <!--<form action="#" th:action="@{/confirm}" th:object="${userForm}" method="post">  -->
     <!-- form action="#" th:action="@{/confirm}" method="post"> -->
-	<form action="/confirm" th:object="${characterForm}">
-        職業：
-        <div th:each="item : ${characterMapItems}">
-            <input type="radio" name="characters" th:value="${item.key}" th:text="${item.value}" th:field="*{selectedCharacter}"/>
+    <th:block th:each="entry: ${characterList}">
+		<form th:action="@{/confirm}" method="POST" th:object="${characterForm}">
+
+        <div th:each="character : ${characterMapItems}">
+            <input type="radio" th:text="${entry.value.name}"/>
         </div>
         <div>
-        名前：<input type="text" th:field="*{name}" />
+        <!--名前：<input type="text" th:field="*{name}" /> -->
       	</div>
-		<input type="submit" value="次へ"/>
-	</form>
+		<input type="submit" name="next" value="次へ"/>
+		</form>
+	</th:block>
 </body>
 </html>

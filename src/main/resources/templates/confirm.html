@@ -10,10 +10,12 @@
         職業：<input type="hidden" th:text="*{selectedCharacter}" ><br>
         名前：<input type="hidden" th:text="*{name}" >
     </div>
-    <input type="hidden" th:field="*{selectedCharacter}" ><br>
-    <input type="hidden" th:field="*{name}" >
-    <input type="hidden" th:field="*{fightmessage}" >
-    <input type="submit" value="たたかう"/>
+    <!--  input type="hidden" th:field="*{selectedCharacter}" ><br> -->
+    <!--input type="hidden" th:field="*{name}" >-->
+    <!--input type="hidden" th:field="*{fightmessage}" >-->
+    <!--input type="hidden" th:field="*{recoverymessage}" >-->
+    <input type="submit" name="fight"    value="たたかう"/>
+    <input type="submit" name="recovery" value="回復する"/>
 </form>
 </body>
 </html>

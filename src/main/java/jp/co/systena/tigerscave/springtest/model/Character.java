@@ -2,8 +2,10 @@ package jp.co.systena.tigerscave.springtest.model;
 
 import javax.validation.constraints.Size;
 
-public class CharacterForm {
+public class Character {
 
+
+  private int characterId;
   @Size(max=10)         // 入力最大長
   private String name;
   private String fightmessage;
@@ -51,4 +53,11 @@ public class CharacterForm {
     this.recoverymessage = recoverymessage;
   }
 
+  public int getCharacterId() {
+    return characterId;
+  }
+
+  public void setCharacterId(int characterId) {
+    this.characterId = characterId;
+  }
 }
